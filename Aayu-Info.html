@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+body {
+  background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<script language="JavaScript">
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    /*document.onkeydown = function(e) {
+       "I" key*/
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      /* "J" key */
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      /* "S" key + macOS */
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      /* "U" key */
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      /* "F12" key */
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.alert {
+  padding: 20px;
+  border-left: 6px solid red;
+  background-color: lightgreen;
+  
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong style="font-size:160%;font-family:Courier New;color: Black;">Notice!</strong><p style="font-size:100%;font-family:Monaco"><b>You can't copy or use any keyboard shortcuts here, so don't try to use....um nothing will happen too! lol!</b></p>
+</div>
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: 1px solid black;
+  font-family: "Times New Roman", Times, serif;
+  outline: outset;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none ;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80');
+background-repeat: no-repeat;
+background-size: 100% 100%;}
+#Simple Info {background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+background-repeat: no-repeat;
+background-size: 100% 100%;}
+#Good Info {background-image: url('https://images.unsplash.com/photo-1615716272135-38b8a68b148a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+background-repeat: no-repeat;
+background-size: 100% 100%;}
+#Conclusion {background-image: url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80');
+background-repeat: no-repeat;
+background-size: 100% 100%;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Simple Info', this, 'green')">Simple Info</button>
+<button class="tablink" onclick="openPage('Good Info', this, 'blue')">Good Info</button>
+<button class="tablink" onclick="openPage('Conclusion', this, 'orange')">Conclusion</button>
+
+<div id="Home" class="tabcontent">
+  <h3 style="font-size:300%;font-family:Lucida Console;Color: black;"><u>Introduction about Aayu</u></h3>
+  <p style="font-size:150%;font-family:Verdana">This is my first ever website, so um I tried my best to design it!
+Anyways.......Take a look at it and checkout the other sections too!</p>
+<p style="font-size:150%;font-family:Verdana"> I always wanted to create a website and today finally I did it! This website is not too much good. But anyways...still I love it! </p>
+</div>
+
+<div id="Good Info" class="tabcontent">
+  <h3 style="font-size:300%;font-family:Lucida Console;Color: black;"><u>Good Info</u></h3>
+  <p style="font-size:150%;font-family:Verdana">So, um I guess I didn't introduce myself well.....I am very cute! Yeah, I am really! And I like to try new things and do new things......As you may have heard other children's hobbies are to read books or study, but I am not like that soooooo studious child XD! My hobby is to watch T.V., laptop or phone, most of the times when am free I play games lol! I really love playing games!</p>
+</div>
+
+<div id="Simple Info" class="tabcontent">
+<h3 style="font-size:300%;font-family:Lucida Console;Color: black;"><u>Simple Info</u></h3>
+  <p style="font-size:150%;font-family:Verdana">Well! Hi there, I am Aayu(Cute and short form of Aayush). I am still in school(As of 2021). I am making this website to just.....um enter this conding world....Truly saying it took me a lot of time to make this website! And at last, this is the output XD!</p>
+</div>
+
+<div id="Conclusion" class="tabcontent">
+  <h3 style="font-size:300%;font-family:Lucida Console;Color: black;"><u>Conclusion</u></h3>
+  <p style="font-size:150%;font-family:Verdana">I guess that's a lot of info about me......Right? I actually don't have any content to write, I just wanna develop a website which I am doing LOL XD! This is my first website and I think it took me 4 to 5 days approx to build this website........When I learn coding very nicely, that time I will make a very professional and standard type website, I really want to! So that's the info.....Thank you for visiting my first ever website that is being hosted! And I hope you liked my website!</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
